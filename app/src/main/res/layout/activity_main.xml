@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:tint="#FFFFFF"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0:30"
+        android:textColor="@color/primaryText"
+        android:textSize="150sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0:30" />
+
+    <TextView
+        android:id="@+id/minLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="monospace"
+        android:text="Minute(0 ~ 99)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primaryText"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerText" />
+
+    <EditText
+        android:id="@+id/minText"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primaryText"
+        app:layout_constraintStart_toEndOf="@+id/minLabel"
+        app:layout_constraintTop_toBottomOf="@+id/timerText" />
+
+    <TextView
+        android:id="@+id/secLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="Second(1 ~ 59)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primaryText"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minLabel" />
+
+    <EditText
+        android:id="@+id/secText"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="numberDecimal"
+        android:text="30"
+        android:textAlignment="viewEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/primaryText"
+        app:layout_constraintStart_toEndOf="@+id/secLabel"
+        app:layout_constraintTop_toBottomOf="@+id/minText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="#FF9800"
+        android:fontFamily="serif-monospace"
+        android:text="Set"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/playStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
